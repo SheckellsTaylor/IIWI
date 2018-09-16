@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Is It Worth It?</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="mobile-angular-ui-base.min.css" />
+<link rel="stlyesheet" href="css.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="mobile-angular-ui.min.js"></script>
+<style>
+  .back {background:url("images/back.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+
+}
+.owned {
+  background-color:rgba(102, 51, 102, 0.7);
+margin:5%;
+  border-radius:10%;
+  color:white;
+  height:15%;
+
+}
+.dashimg {
+opacity:1.0;
+float:right;
+
+}
+.base {
+  background-color:rgba(102, 51, 102, 1.0);
+  color:white;
+}
+
+</style>
+</head>
+<body ng-app="iiwiApp">
+
+
+
+
+
+
+
+
+    <div class="app">
+
+
+
+      <div class='app-body back'>
+        <div class='app-content'>
+
+          <div class="navbar navbar-app navbar-absolute-top">
+
+            <div class="navbar-brand navbar-brand-center base">
+              Is It Worth it?
+            </div>
+
+            <div class="btn-group pull-left">
+              <div class="btn btn-navbar">
+                Log Out
+              </div>
+            </div>
+
+            <div class="btn-group pull-right">
+              <div class="btn btn-navbar">
+
+                <a href="#!dashboard">Dashboard</a>
+              </div>
+            </div>
+          </div>
+          <div class="section"><br>
+            <br><br>
+            <!--
+            <div class="panel-group" ui-state="myAccordion" ui-default="2">
+
+  <div class="panel panel-default" ng-repeat="i in [1]">
+    <div class="panel-heading" ui-set="{'myAccordion': i}">
+      <h4 class="panel-title">
+          Learn how to use Is It Worth It
+      </h4>
+    </div>
+    <div ui-if="myAccordion == {{i}}">
+      <div class="panel-body">
+        Simply find the store in your area and then begin searching in your stores for products and see their prices.<br>
+        Some prices may not be there and this gives you a chance to update the product so you will always have a price awareness and you help others at the same time.<br>
+        {{lorem}}
+      </div>
+    </div>
+  </div>
+</div>
+            <h2></h2>
+            <p>  </p>
+-->
+       </div>
+
+          <div ng-view><br></div>
+        </div>
+
+    </div>
+      <!-- modals and overlays -->
+      <div ui-yield-to="modals">
+
+      </div>
+
+
+</div>
+
+  <script>
+  var app=angular.module("iiwiApp", ["ngRoute"]);
+  app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+      templateUrl : "index.htm"
+      })
+      .when("/search", {
+        templateUrl : "grocerysearch.htm"
+      })
+      .when("/list", {
+        templateUrl : "grocerylist.htm"
+      })
+      .when("/dashboard", {
+        templateUrl : "dashboard.html"
+      })
+        .when("/calculator", {
+          templateUrl : "calculator.html"
+        })
+        .when("/grocerylist", {
+          templateUrl : "grocerylist.htm"
+        })
+        .when("/navigate", {
+          templateUrl : "navigation.htm"
+        })
+        .when("/addgrocery", {
+          templateUrl : "addgrocery.html"
+        })
+                .when("/logout", {
+            templateUrl : "logout.htm"
+          });
+  });
+  </script>
+  </body>
+  </html>

@@ -1,0 +1,52 @@
+<div class="modal modal-overlay" ui-if='modal2' ui-state='modal2'>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close"
+                  ui-turn-off="modal2">&times;</button>
+          <h4 class="modal-title">Menu</h4>
+        </div>
+        <div class="modal-body">
+
+            <div class="section">
+          <a href="#/!">Home</a>
+          <br>
+          <a href="#!search">Grocery Search</a>
+          <br>
+          <a href="#!list">Grocery List</a>
+          <br>
+                    <a href="#!calculator">Calculator</a>
+                    <br>
+          <a href="#!close">Close</a>  </div>
+          </div
+        <div class="modal-footer">
+          <button ui-turn-off="modal2" class="btn btn-default">Close</button>
+              </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<script>
+  var app = angular.module("myApp", ["ngRoute"]);
+  app.config(function($routeProvider) {
+      $routeProvider
+      .when("/", {
+        templateUrl : "home.htm"
+      })
+      .when("/search", {
+        templateUrl : "grocerysearch.htm"
+      })
+      .when("/calculator", {
+        templateUrl : "calculator.htm"
+      })
+      .when("/list", {
+        templateUrl : "grocerylist.htm"
+      })
+          .when("/close", {
+        templateUrl : "close.htm"
+      });
+  });
+</script>

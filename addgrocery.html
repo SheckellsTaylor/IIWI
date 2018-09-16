@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Price</title>
+<link rel="stylesheet" href="swiper.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="mobile-angular-ui-base.min.css" />
+<link rel="stlyesheet" href="css.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="mobile-angular-ui.min.js"></script>
+<style>
+.contain {
+  height:9em;
+  width:auto;
+background-color: rgba(0, 0, 255, 0.6);
+  border-radius:1em;
+  font-size:2em;
+  text-align:center;
+  color:white;
+
+}
+.space {
+  padding:.5em;
+  width:75%;
+  color:black;
+}
+.wrap {
+  height:9em;
+}
+
+.big {
+  font-size:5em;
+}
+.swiper-container {
+      width: 500px;
+      height: 300px;
+      margin: 20px auto;
+  }
+
+  .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+  }
+  .caption {
+font-size:.7em;
+float:right;
+padding-right:1em;
+padding-top:1em;
+color:gray;
+  }
+  .marg {
+    padding-left:25%;
+    padding-right:25%;
+  }
+  .marg1 {
+    padding-left:5%;
+    padding-right:5%;
+  }
+  .see {
+    color:black;
+  }
+</style>
+<body>
+<h3> add grocery</h3>
+<div class="swiper-container">
+
+   <div class="swiper-wrapper">
+     <div class="swiper-slide"><div class="contain marg1"><br>
+<form action="addgroceries.php" method="post">
+  Product Name:<br>
+  <input type="text" name="the_product" class="see" required><br>
+  <p class="caption"><i>Swipe to the left...</i></p>
+</div></div>
+<div class="swiper-slide"><div class="contain"><br>
+  Cost:
+  <input type="text" name="the_cost" class="see" required><br>
+  <p class="caption"><i>Swipe to the left...</i></p>
+</div></div>
+<div class="swiper-slide"><div class="contain marg"><br>
+Store name:<br>
+<select  name="the_store" class="see" required>
+  <option value="blank"></option>
+  <option value="harristeeter">Harris Teeter</option>
+  <option value="foodlion">Food Lion</option>
+  <option value="lidl">Lidl</option>
+  <option value="target">Target</option>
+  <option value="walmart">Walmart</option>
+  <option value="aldi">ALDI</option>
+  <optoin value="traderjoes">Trader Joes</option>
+  <option value="bjs">BJ's</option>
+  <option value="samsclub">Sam's Club</option>
+</select>
+
+
+    <br>
+
+<input type="submit" value="Submit"><br>
+</div></div>
+</form>
+</div>
+</div>
+
+<!--
+<form action="get_product" method="get">
+  Product:<input type="text" name="the-product">
+  <input type="submit" value="Submit">
+</form>
+-->
+<script src="swiper.min.js"></script>
+<script>
+
+	  var swiper = new Swiper('.swiper-container');
+
+ 	</script>
+</body>
+</html>

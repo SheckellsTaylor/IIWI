@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Is It Worth It?</title>
+<link rel="stylesheet" href="swiper.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="mobile-angular-ui-base.min.css" />
+<link rel="stlyesheet" href="css.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="mobile-angular-ui.min.js"></script>
+<style>
+.contain {
+  height:9em;
+  width:auto;
+background-color: rgba(0, 0, 255, 0.6);
+  border-radius:1em;
+  font-size:2em;
+  text-align:center;
+  color:white;
+
+}
+.space {
+  padding:.5em;
+  width:75%;
+  color:black;
+}
+.wrap {
+  height:9em;
+}
+
+.big {
+  font-size:5em;
+}
+.swiper-container {
+      width: 500px;
+      height: 300px;
+      margin: 20px auto;
+  }
+
+  .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+  }
+  .caption {
+font-size:.7em;
+float:right;
+padding-right:1em;
+padding-top:1em;
+color:gray;
+  }
+</style>
+</head>
+<body>
+  <div class="swiper-container">
+
+     <div class="swiper-wrapper">
+
+         <div class="swiper-slide"><div class="contain"><br>
+         <p>What is the cost of the item?<br><br><input step="0.01" value="0.00" type="number" ng-model="a" placeholder="Item cost..." class="space"></p>
+<p class="caption"><i>Swipe to the left...</i></p>
+         </div></div>
+
+         <div class="swiper-slide"><div class="contain"><br>
+           <p>How many are you planning to buy?<br><input step="0.01" value="0.00" type="number" ng-model="b" placeholder="Number of items..." class="space"></p>
+<p class="caption"><i>Swipe to the left...</i></p>
+         </div></div>
+
+         <div class="swiper-slide"><div class="contain"><br>
+           <p>What is the value of the coupon?<br><input step="0.01" value="0.00" type="number" ng-model="c" placeholder="Coupon vlaue..." class="space"></p>
+<p class="caption"><i>Swipe to the left...</i></p>
+         </div></div>
+
+         <div class="swiper-slide"><div class="contain"><br>
+         <p>How many coupons do you have?<br><input step="0.01" value="0.00" type="number" ng-model="d" placeholder="Number of coupons..." class="space"></p>
+<p class="caption"><i>Swipe to the left...</i></p>
+         </div></div>
+
+         <div class="swiper-slide"><div class="contain"><br>
+           <p>How many miles is it to the store?<br><input type="number" ng-model="e" placeholder="Miles..." class="space"></p>
+<p class="caption"><i>Swipe to the left...</i></p>
+
+
+         </div></div>
+
+         <div class="swiper-slide"><div class="contain"><p><br>You are going to spend a total of ${{a *b - c * d}} saving you a total of ${{c * d }} and will drive a total of {{e}} miles</p>
+</div>
+</div>
+
+
+
+     </div>
+
+ </div>
+
+<div>
+ <div>
+
+</div>
+
+
+</div>
+
+<script src="swiper.min.js"></script>
+<script>
+
+  var swiper = new Swiper('.swiper-container');
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Is It Worth It?</title>
+<link rel="stylesheet" href="swiper.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="mobile-angular-ui-base.min.css" />
+<link rel="stlyesheet" href="css.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="mobile-angular-ui.min.js"></script>
+<style>
+  .owned {
+    background-color:rgba(102, 51, 102, 0.7);
+  margin:5%;
+    border-radius:10%;
+    color:white;
+    height:15%;
+
+  }
+</style>
+<body>
+
+<a href="#!list">
+<div class="section owned">
+
+      <img class="img-fluid dashimg" src="images/addshop2.png">
+<br>
+<h2>Build Your Grocery List</h2>
+
+
+  </div>
+</a>
+<a class="dash" href="#">
+  <div class="section owned">
+<img class="img-fluid dashimg" src="images/search1.png"><br><br>
+    <h2>Search Prices</h2>
+
+    </div>
+  </a>
+  <a class="dash" href="#!calculator">
+    <div class="section owned">
+<img class="img-fluid dashimg" src="images/calc1.png"><br>
+      <h2>Calculate if<br> it is worth it</h2>
+
+      </div>
+    </a>
+    <a class="dash" href="#!addgrocery">
+      <div class="section owned">
+  <img class="img-fluid dashimg" src="images/addgrocery1.png"><br>
+        <h2>Add <br>Grocery Price</h2>
+
+        </div>
+      </a>
+    <script>
+    var app=angular.module("iiwiApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+      $routeProvider
+      .when("/", {
+        templateUrl : "index.htm"
+        })
+        .when("/search", {
+          templateUrl : "grocerysearch.htm"
+        })
+        .when("/list", {
+          templateUrl : "grocerylist.htm"
+        })
+        .when("/dashboard", {
+          templateUrl : "loggedIN.html"
+        })
+          .when("/calculator", {
+            templateUrl : "calculator.html"
+          })
+          .when("/grocerylist", {
+            templateUrl : "grocerylist.htm"
+          })
+          .when("/navigate", {
+            templateUrl : "navigation.htm"
+          })
+          .when("/addgrocery", {
+            templateUrl : "addgrocery.html"
+          })
+                  .when("/logout", {
+              templateUrl : "logout.htm"
+            });
+    });
+    </script>
+  </body>
+  </html>
